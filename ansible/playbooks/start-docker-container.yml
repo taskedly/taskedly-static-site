@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Start docker container
+    docker_container:
+      name: taskedly-static-site
+      image: taskedly-static-site
+      state: started
+      ports:
+      - "80:80"

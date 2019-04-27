@@ -1,0 +1,16 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Copy Dockerfile and source code to target host
+    copy:
+      src: "{{ item }}"
+      dest: /tmp/taskedly-static-site
+    with_items:
+        - ../../Dockerfile
+        - ../../src
+
+  - name: Build docker image
+    docker_image:
+      path: /tmp/taskedly-static-site
+      name: taskedly-static-site

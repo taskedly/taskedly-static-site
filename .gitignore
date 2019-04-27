@@ -1,0 +1,7 @@
+.idea/
+*.iml
+
+.vagrant/
+
+prod.ini
+prod.yml
