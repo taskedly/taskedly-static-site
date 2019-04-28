@@ -4,11 +4,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/centos-7.4"
 
-  #config.vm.synced_folder "ansible/", "/vagrant"
-  #config.vm.synced_folder "docker/", "/vagrant"
-  #config.vm.synced_folder "src/", "/vagrant"
-
-
   config.vm.define "app1" do |server|
     server.vm.hostname = "server.example.com"
     server.vm.network :private_network, ip: "192.168.60.4"
