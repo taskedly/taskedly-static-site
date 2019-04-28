@@ -6,5 +6,6 @@
     - name: docker
 
   roles:
+  - geerlingguy.repo-epel
   - geerlingguy.pip
   - geerlingguy.docker
