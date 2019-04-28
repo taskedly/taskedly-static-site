@@ -5,7 +5,7 @@
   - name: Copy Dockerfile and source code to target host
     copy:
       src: "{{ item }}"
-      dest: /tmp/taskedly-static-site
+      dest: /tmp/taskedly-static-site/
     with_items:
         - ../../Dockerfile
         - ../../src
